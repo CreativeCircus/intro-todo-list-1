@@ -2,8 +2,6 @@
 
 console.log("Hello World from main.js!");
 
-// your homework is to make this todo list a little more useful by showing which items are higher priority than others.
-// look in the HTML, they have classes that designate their priority, 
 
 // 1. make the "total" span in the stats div say the correct number
 
