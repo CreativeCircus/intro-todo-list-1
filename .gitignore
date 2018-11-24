@@ -1,2 +1,6 @@
+.DS_Store
 node_modules
-assets/js/main.finished.js
+package-lock.json
+yarn.lock
+
+*.done.*

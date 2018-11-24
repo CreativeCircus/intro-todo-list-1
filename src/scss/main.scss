@@ -6,12 +6,15 @@ AUTHOR:		Your Name Here
 
 TABLE OF CONTENTS:
 
+0. Reset
 1. Main Layout
 2. Content
 
 ==============================================
 */
 
+/* 0. Reset ================================= */
+@import 'reset';
 
 
 /* 1. Main Layout ================================= */
@@ -24,6 +27,10 @@ body {
 	background: #ccc;
 }
 
+
+
+
+/* 2. Content ================================= */
 
 .container {
 	position: relative;
@@ -52,6 +59,10 @@ h2 {
 		color: #666;
 		border-bottom: 1px solid #999;
 		padding: 10px 5px;
+
+		&.finished {
+			text-decoration: line-through;
+		}
 	}
 }
 
