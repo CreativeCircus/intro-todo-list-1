@@ -54,11 +54,15 @@ h2 {
 
 .todo {
 	margin-top: 10px;
-	border: 1px solid #999;
+	border: 2px solid #555;
+	margin: 10px 0;
 	li {
-		color: #666;
-		border-bottom: 1px solid #999;
+		color: black;
 		padding: 10px 5px;
+		border-bottom: 1px solid #999;
+		&:last-child {
+			border-bottom: none;
+		}
 
 		&.finished {
 			text-decoration: line-through;
