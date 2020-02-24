@@ -3,16 +3,31 @@
 var itemList = document.querySelector('ul.todo');
 var newItemField = document.querySelector('.new-item');
 var addItemBtn = document.querySelector('.add-item');
-addItemBtn.addEventListener('click', function () {
+
+var makeNewItem = function makeNewItem(name) {
   var newItemLI = document.createElement('li');
-  newItemLI.textContent = newItemField.value;
+  newItemLI.textContent = name;
+  var completeButton = document.createElement('button');
+  completeButton.innerText = '😐';
+  newItemLI.appendChild(completeButton);
   newItemField.value = '';
   itemList.appendChild(newItemLI);
   updateItemCounts();
-});
+  completeButton.addEventListener('click', function () {
+    newItemLI.classList.toggle('finished');
+
+    if (newItemLI.classList.contains('finished')) {
+      completeButton.innerText = '😀';
+    } else {
+      completeButton.innerText = '😐';
+    }
+
+    updateItemCounts();
+  });
+};
 
 var updateItemCounts = function updateItemCounts() {
-  var allItems = document.querySelectorAll('ul.todo li');
+  var allItems = document.querySelectorAll('ul.todo li:not(.finished)');
   var totalSpan = document.querySelector('.stats .total');
   totalSpan.innerText = allItems.length;
 };
@@ -27,4 +42,11 @@ clearButton.onclick = function () {
   });
   updateItemCounts();
 };
+
+addItemBtn.addEventListener('click', function () {
+  makeNewItem(newItemField.value);
+});
+makeNewItem('Do homework');
+makeNewItem('Self care');
+makeNewItem('Sleep');
 //# sourceMappingURL=main.js.map

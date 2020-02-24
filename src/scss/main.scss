@@ -56,17 +56,30 @@ h2 {
 	margin-top: 10px;
 	border: 2px solid #555;
 	margin: 10px 0;
+
 	li {
+		position: relative;
 		color: black;
 		padding: 10px 5px;
 		border-bottom: 1px solid #999;
+
 		&:last-child {
 			border-bottom: none;
 		}
 
 		&.finished {
 			text-decoration: line-through;
+			color: #999;
+		}
+
+		button {
+			font-size: 1.5em;
+			border: 0;
+			outline: none;
+			background-color: transparent;
+			position: absolute;
+			top: 5px;
+			right: 5px;
 		}
 	}
 }
-
