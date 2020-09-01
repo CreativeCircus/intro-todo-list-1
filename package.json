@@ -1,7 +1,7 @@
 {
-	"name": "circus-starter",
+	"name": "intro-todo",
 	"version": "1.8.1",
-	"description": "A good starting point for new Circus students",
+	"description": "A todo list. You know, like every programmer does.",
 	"main": "gulpfile.js",
 	"devDependencies": {
 		"@babel/core": "^7.4.0",
